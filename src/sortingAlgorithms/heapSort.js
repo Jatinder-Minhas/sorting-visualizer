@@ -46,7 +46,7 @@ function heapify(array, size, i, animations) {
         largest = right;
   
       // Swap and continue heapifying if root is not largest
-      if (largest != i) {
+      if (largest !== i) {
 
         swap(array, i, largest, animations);
 
