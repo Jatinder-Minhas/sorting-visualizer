@@ -57,7 +57,7 @@ export default class SortingVisualizer extends React.Component {
         const color = i % 3 === 0 ? SECONDARY_COLOR : PRIMARY_COLOR;
         setTimeout(() => {
 
-          if(i == 0) {
+          if(i === 0) {
             this.toggleOnOff();
           }
 
@@ -65,7 +65,7 @@ export default class SortingVisualizer extends React.Component {
           barTwoStyle.backgroundColor = color;
         }, i * ANIMATION_SPEED_MS);
       } else {
-        if(sortType != this.state.enum.mergeSort) {
+        if(sortType !== this.state.enum.mergeSort) {
           setTimeout(() => {
             const [barOneIdx, barOneHeight, barTwoIdx, barTwoHeight] = animations[i];
             const barOneStyle = arrayBars[barOneIdx].style;
@@ -73,7 +73,7 @@ export default class SortingVisualizer extends React.Component {
             barOneStyle.height = `${barOneHeight}px`;
             barTwoStyle.height = `${barTwoHeight}px`;
 
-            if(i == animations.length - 1) {
+            if(i === animations.length - 1) {
               this.toggleOnOff();
             }
           }, i * ANIMATION_SPEED_MS);
@@ -84,7 +84,7 @@ export default class SortingVisualizer extends React.Component {
             const barOneStyle = arrayBars[barOneIdx].style;
             barOneStyle.height = `${newHeight}px`;
             
-            if(i == animations.length - 1) {
+            if(i === animations.length - 1) {
               this.toggleOnOff();
             }
           }, i * ANIMATION_SPEED_MS);
