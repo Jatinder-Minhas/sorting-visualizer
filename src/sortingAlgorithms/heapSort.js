@@ -20,12 +20,12 @@ function heapSort(array, animations) {
     var size = array.length;
 
     //Build max heap
-    for(var i = size/2 - 1; i >= 0; i--) {
+    for(let i = size/2 - 1; i >= 0; i--) {
         heapify(array, size, i, animations);
     }
 
     //Heap Sort 
-    for(var i = size - 1; i >= 0; i--) {
+    for(let i = size - 1; i >= 0; i--) {
 
         swap(array, 0, i, animations);
 
